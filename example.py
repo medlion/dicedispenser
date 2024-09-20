@@ -96,4 +96,4 @@ class PCA9685:
 
 if __name__=='__main__':
     pwm = PCA9685(0x40, debug=False)
-    pwm.spinChannel(0)
+    pwm.spinChannel(1)
