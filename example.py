@@ -80,21 +80,20 @@ class PCA9685:
     "Sets the Servo Pulse,The PWM frequency must be 50HZ"
     pulse = pulse*4096/20000        #PWM frequency is 50HZ,the period is 20000us
     self.setPWM(channel, 0, int(pulse))
-
-if __name__=='__main__':
-
-  pwm = PCA9685(0x40, debug=False)
-  pwm.setPWMFreq(50)
-  while True:
-   # setServoPulse(2,2500)
-    #for i in range(500,2500,10):
+  
+  def spinChannel(self, channel):
+    self.setPWMFreq(50)
+    # setServoPulse(2,2500)
+        #for i in range(500,2500,10):
     for i in range(0, 2048, 5):
-      pwm.setServoPulse(0,i)
-      time.sleep(0.02)
+        self.setServoPulse(channel,i)
+        time.sleep(0.02)
 
     #for i in range(2500,500,-10):
     for i in range(2048,0,-5):
-      pwm.setServoPulse(0,i)
+      self.setServoPulse(channel,i)
       time.sleep(0.02)
 
-    break
+if __name__=='__main__':
+    pwm = PCA9685(0x40, debug=False)
+    pwm.spinChannel(0)
