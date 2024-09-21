@@ -23,7 +23,7 @@ def getRandomNumber(max): # generate a random number between 0 and max-1
     return random.randint(0, max-1)
 
 def goServoGo(channel): # Putting this in it's own function to standardise LED lighting and such
-    WS.setUnitColour(unit=i, colour=LED_COLOUR_ARRAY[i])
+    WS.setUnitColour(unit=channel, colour=LED_COLOUR_ARRAY[i])
     PCA.spinChannel(channel=channel)
     WS.clear()
 
