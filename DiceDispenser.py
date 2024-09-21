@@ -12,8 +12,8 @@ PCA = PCA9685.PCA9685() # Control for the servo motors
 WS = WS2812.WS2812(ledsPerUnit=LEDS_PER_UNIT, units=NUMBER_OF_SERVOS)
 
 LED_COLOUR_ARRAY = [
-    Color(255, 0, 0),
     Color(0, 255, 0),
+    Color(255, 0, 0),
     Color(0, 0, 255),
     Color(255, 0, 255),
     Color(0, 255, 255)
