@@ -36,6 +36,7 @@ def lightUpChannel(channel):
 
 def onButtonPress():
     chosenServo = getRandomNumber(NUMBER_OF_SERVOS)
+    doALightShow(mayNotEnd=chosenServo)
     goServoGo(chosenServo)
     
 def startup():
@@ -64,8 +65,8 @@ def doALightShow(mayNotEnd = -1):
 
         
 if __name__=='__main__':
-    #startup()
-    doALightShow()
+    startup()
+    #doALightShow()
 
     button = Button(BUTTON_GPIO)
 
