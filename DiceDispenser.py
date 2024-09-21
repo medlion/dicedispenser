@@ -68,7 +68,12 @@ def doALightShow(mayNotEnd = -1):
 
 def defaultLightState():
     #WS.clear()
-    WS.setAllColour(COLOUR_WHITE)
+    #WS.setAllColour(COLOUR_WHITE)
+    showAllLightStates()
+
+def showAllLightStates():
+    for i in NUMBER_OF_SERVOS:
+        lightUpChannel(i)
         
 if __name__=='__main__':
     #startup()
