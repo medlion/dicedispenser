@@ -16,11 +16,11 @@ LIGHT_SHOW_PAUSE_LENGTH = 0.5 # In seconds, how long we chill on an individual c
 LIGHT_SHOW_LENGTH = 15 # In seconds. Weird things are gonna happen if this is less than the pause length
 
 LED_COLOUR_ARRAY = [
-    Color(0, 255, 0),
-    Color(255, 0, 0),
-    Color(0, 0, 255),
-    Color(255, 0, 255),
-    Color(0, 255, 255)
+    Color(244, 175, 170),
+    Color(129, 193, 181),
+    Color(232, 149, 42),
+    Color(0, 138, 161),
+    Color(237, 92, 63)
 ]
 
 def getRandomNumber(max, skipIf = -1): # generate a random number between 0 and max-1
