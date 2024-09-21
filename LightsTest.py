@@ -8,4 +8,6 @@ if __name__ == "__main__":
     color = Color(0, 0, 255)
     for i in range (0, 40):
         strip.set_pixel_color(i=i, color=color)
+        strip.show()
         time.sleep(1)
+        strip.clear()
