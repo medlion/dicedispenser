@@ -11,6 +11,7 @@ class WS2812:
         self.units = units
         ledCount = ledsPerUnit*units
         self.driver = WS2812SpiDriver(spi_bus=0, spi_device=0, led_count=ledCount).get_strip()
+        self.driver.set_brightness(0.5)
 
     def clear(self) -> None:
         self.driver.clear()
