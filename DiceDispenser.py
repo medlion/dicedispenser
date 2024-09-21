@@ -23,6 +23,8 @@ LED_COLOUR_ARRAY = [
     Color(237, 92, 63)
 ]
 
+COLOUR_WHITE = Color(255, 255, 255)
+
 def getRandomNumber(max, skipIf = -1): # generate a random number between 0 and max-1
     return random.randint(0, max-1)
 
@@ -63,6 +65,9 @@ def doALightShow(mayNotEnd = -1):
         WS.clear()
         time.sleep(LIGHT_SHOW_PAUSE_LENGTH)
 
+def defaultLightState():
+    #WS.clear()
+    WS.setAllColour(COLOUR_WHITE)
         
 if __name__=='__main__':
     startup()

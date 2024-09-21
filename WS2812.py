@@ -21,3 +21,6 @@ class WS2812:
         for i in range (startingLED, startingLED+self.ledsPerUnit):
             self.driver.set_pixel_color(i, colour)
         self.driver.show()
+
+    def setAllColour(self, colour):
+        self.driver.set_all_pixels(colour)
