@@ -71,7 +71,7 @@ def defaultLightState():
     WS.setAllColour(COLOUR_WHITE)
         
 if __name__=='__main__':
-    startup()
+    #startup()
     #doALightShow()
     defaultLightState()
 
