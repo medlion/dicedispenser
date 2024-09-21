@@ -23,7 +23,9 @@ def getRandomNumber(max): # generate a random number between 0 and max-1
     return random.randint(0, max-1)
 
 def goServoGo(channel): # Putting this in it's own function to standardise LED lighting and such
+    WS.setUnitColour(unit=i, colour=LED_COLOUR_ARRAY[i])
     PCA.spinChannel(channel=channel)
+    WS.clear()
 
 def onButtonPress():
     chosenServo = getRandomNumber(NUMBER_OF_SERVOS)
@@ -31,9 +33,7 @@ def onButtonPress():
     
 def startup():
     for i in range(NUMBER_OF_SERVOS):
-        WS.setUnitColour(unit=i, colour=LED_COLOUR_ARRAY[i])
         goServoGo(i)
-        WS.clear()
 
 if __name__=='__main__':
     startup()
