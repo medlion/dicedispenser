@@ -72,7 +72,7 @@ def defaultLightState():
     showAllLightStates()
 
 def showAllLightStates():
-    for i in NUMBER_OF_SERVOS:
+    for i in range(NUMBER_OF_SERVOS):
         lightUpChannel(i)
         
 if __name__=='__main__':
