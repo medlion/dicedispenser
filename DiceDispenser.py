@@ -12,8 +12,8 @@ def onButtonPress():
     chosenServo = getRandomNumber(NUMBER_OF_SERVOS)
     print(chosenServo)
     chosenServo = 0 # Testing, remove this
-    PCA = PCA9685.PCA9685 # Control for the servo motors
-    PCA.spinChannel(self=PCA, channel=chosenServo)
+    PCA = PCA9685.PCA9685() # Control for the servo motors
+    PCA.spinChannel(channel=chosenServo)
 
 
 if __name__=='__main__':
