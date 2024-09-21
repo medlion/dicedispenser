@@ -55,8 +55,13 @@ def doALightShow(mayNotEnd = -1):
         count += 1
         if count > iterations and not channelToShow == mayNotEnd:
             shouldEnd = True
-        
 
+    for i in range(5):
+        lightUpChannel(mayNotEnd)
+        time.sleep(LIGHT_SHOW_PAUSE_LENGTH)
+        WS.clear()
+
+        
 if __name__=='__main__':
     #startup()
     doALightShow()
