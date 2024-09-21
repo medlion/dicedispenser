@@ -57,14 +57,13 @@ def doALightShow(mayNotEnd = -1):
         
 
 if __name__=='__main__':
-    startup()
-    
+    #startup()
+    doALightShow()
+
     button = Button(BUTTON_GPIO)
 
     # Initialize
 
     while (True): # Main Loop
-        #button.wait_for_press()
-        #onButtonPress()
-        doALightShow()
-        # Spin Servo
+        button.wait_for_press()
+        onButtonPress()
