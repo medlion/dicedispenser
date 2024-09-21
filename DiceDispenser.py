@@ -11,9 +11,13 @@ def getRandomNumber(max): # generate a random number between 0 and max-1
 def onButtonPress():
     chosenServo = getRandomNumber(NUMBER_OF_SERVOS)
     print(chosenServo)
+    chosenServo = 0 # Testing, remove this
+    PCA = PCA9685.PCA9685 # Control for the servo motors
+    PCA.spinChannel(chosenServo)
+
 
 if __name__=='__main__':
-    PCA = PCA9685.PCA9685 # Control for the servo motors
+    
     button = Button(BUTTON_GPIO)
 
     # Initialize
