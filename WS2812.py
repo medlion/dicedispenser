@@ -16,7 +16,10 @@ class WS2812:
         self.driver.clear()
 
     def setUnitColour(self, unit, colour): # unit order between 0 and units-1, Colour is a color object
+        print ('Setting unit colour for unit ' + unit)
         startingLED = unit * self.ledsPerUnit
+        print ('Starting at LED ' + startingLED)
         for i in range (startingLED, self.ledsPerUnit):
+            print ('Setting LED colour for LED ' + i)
             self.driver.set_pixel_color(i, colour)
         self.driver.show()
