@@ -78,7 +78,7 @@ def showAllLightStates():
 if __name__=='__main__':
     startup()
     #doALightShow()
-    #defaultLightState()
+    defaultLightState()
 
     button = Button(BUTTON_GPIO)
 
