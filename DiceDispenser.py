@@ -68,17 +68,17 @@ def doALightShow(mayNotEnd = -1):
 
 def defaultLightState():
     #WS.clear()
-    #WS.setAllColour(COLOUR_WHITE)
-    showAllLightStates()
+    WS.setAllColour(COLOUR_WHITE)
+    #showAllLightStates()
 
 def showAllLightStates():
     for i in range(NUMBER_OF_SERVOS):
         lightUpChannel(i)
         
 if __name__=='__main__':
-    #startup()
+    startup()
     #doALightShow()
-    defaultLightState()
+    #defaultLightState()
 
     button = Button(BUTTON_GPIO)
 
