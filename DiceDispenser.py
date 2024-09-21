@@ -40,6 +40,7 @@ def onButtonPress():
     chosenServo = getRandomNumber(NUMBER_OF_SERVOS)
     doALightShow(mayNotEnd=chosenServo)
     goServoGo(chosenServo)
+    defaultLightState()
     
 def startup():
     for i in range(NUMBER_OF_SERVOS):
@@ -72,6 +73,7 @@ def defaultLightState():
 if __name__=='__main__':
     startup()
     #doALightShow()
+    defaultLightState()
 
     button = Button(BUTTON_GPIO)
 
