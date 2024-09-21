@@ -24,3 +24,4 @@ class WS2812:
 
     def setAllColour(self, colour):
         self.driver.set_all_pixels(colour)
+        self.driver.show()
