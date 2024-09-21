@@ -46,6 +46,7 @@ def doALightShow(mayNotEnd = -1):
     shouldEnd = False
     count = 0
     iterations = LIGHT_SHOW_LENGTH / LIGHT_SHOW_PAUSE_LENGTH
+    channelToShow = -1
     while not shouldEnd:
         channelToShow = getRandomNumber(max=NUMBER_OF_SERVOS, skipIf=channelToShow)
         lightUpChannel(channelToShow)
