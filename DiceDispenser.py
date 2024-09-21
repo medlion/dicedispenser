@@ -12,8 +12,8 @@ LEDS_PER_UNIT = 8
 PCA = PCA9685.PCA9685() # Control for the servo motors
 WS = WS2812.WS2812(ledsPerUnit=LEDS_PER_UNIT, units=NUMBER_OF_SERVOS)
 
-LIGHT_SHOW_PAUSE_LENGTH = 0.5 # In seconds, how long we chill on an individual colour
-LIGHT_SHOW_LENGTH = 15 # In seconds. Weird things are gonna happen if this is less than the pause length
+LIGHT_SHOW_PAUSE_LENGTH = 0.2 # In seconds, how long we chill on an individual colour
+LIGHT_SHOW_LENGTH = 8 # In seconds. Weird things are gonna happen if this is less than the pause length
 
 LED_COLOUR_ARRAY = [
     Color(244, 175, 170),
