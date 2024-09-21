@@ -60,6 +60,7 @@ def doALightShow(mayNotEnd = -1):
         lightUpChannel(mayNotEnd)
         time.sleep(LIGHT_SHOW_PAUSE_LENGTH)
         WS.clear()
+        time.sleep(LIGHT_SHOW_PAUSE_LENGTH)
 
         
 if __name__=='__main__':
