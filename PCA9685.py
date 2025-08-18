@@ -25,6 +25,10 @@ class PCA9685:
   __ALLLED_OFF_L       = 0xFC
   __ALLLED_OFF_H       = 0xFD
 
+  MIN_SPIN = 0
+  MAX_SPIN = 2048
+  SPIN_STEP = 5
+
   def __init__(self, address=0x40, debug=False):
     self.bus = smbus.SMBus(1)
     self.address = address
@@ -85,12 +89,12 @@ class PCA9685:
     self.setPWMFreq(50)
     # setServoPulse(2,2500)
         #for i in range(500,2500,10):
-    for i in range(0, 2048, 5):
+    for i in range(self.MIN_SPIN, self.MAX_SPIN, self.SPIN_STEP):
         self.setServoPulse(channel,i)
         time.sleep(0.02)
 
     #for i in range(2500,500,-10):
-    for i in range(2048,0,-5):
+    for i in range(self.MAX_SPIN,self.MIN_SPIN,(self.SPIN_STEP * -1)):
       self.setServoPulse(channel,i)
       time.sleep(0.02)
 
