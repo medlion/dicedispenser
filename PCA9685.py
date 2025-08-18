@@ -26,7 +26,7 @@ class PCA9685:
   __ALLLED_OFF_H       = 0xFD
 
   MIN_SPIN = 0
-  MAX_SPIN = 512
+  MAX_SPIN = 1024
   SPIN_STEP = 5
 
   def __init__(self, address=0x40, debug=False):
