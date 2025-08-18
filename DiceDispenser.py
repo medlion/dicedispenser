@@ -16,11 +16,11 @@ LIGHT_SHOW_PAUSE_LENGTH = 0.2 # In seconds, how long we chill on an individual c
 LIGHT_SHOW_LENGTH = 8 # In seconds. Weird things are gonna happen if this is less than the pause length
 
 LED_COLOUR_ARRAY = [
-    Color(244, 175, 170),
-    Color(129, 193, 181),
-    Color(232, 149, 42),
+    Color(235, 125, 154),
+    Color(73, 178, 142),
+    Color(255, 157, 0),
     Color(0, 138, 161),
-    Color(237, 92, 63)
+    Color(255, 42, 0)
 ]
 
 COLOUR_WHITE = Color(255, 255, 255)
